@@ -110,8 +110,9 @@ Walk a file hierarchy
 
     find ./ -type f -print0 |xargs -0 chmod 644
 
-#### find the files and remove
+#### find the files or directory and remove
  - `find . -name "arquivo.tar.*" -type f -ls -exec rm -f {} \;`
+ - `find . -name "node_modules" -type d -exec rm -rf {} +`
 
 #### find the files and compress
  - `find ./ -iname "*.conf" -type f -print0 | tar -czvf confs.tar.gz --null -T -`
