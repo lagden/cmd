@@ -217,8 +217,14 @@ Copy directory hierarchies, create and extract archives
 #### Permission using ACL
 
     HTTPDUSER=`ps aux | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1`
-    sudo setfacl -R -m u:"$HTTPDUSER":rwx -m u:tex:rwx /var/www/app/data
-    sudo setfacl -dR -m u:"$HTTPDUSER":rwx -m u:tex:rwx /var/www/app/data
+    sudo setfacl -R -m u:"$HTTPDUSER":rwx -m u:lagden:rwx /my/super/folder
+    sudo setfacl -dR -m u:"$HTTPDUSER":rwx -m u:lagden:rwx /my/super/folder
+    
+    sudo chmod 755 -R /my/super/folder
+    sudo chmod g+s /my/super/folder
+    sudo setfacl -d -m g::rwx /my/super/folder
+    sudo setfacl -d -m o::rx /my/super/folder
+    getfacl /my/super/folder
 
 #### Redis
 
