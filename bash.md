@@ -251,3 +251,9 @@ Or, if you don't want/need launchctl, you can just run:
  - sh: `sudo chown -R $(whoami):admin /usr/local`
  - fish: `sudo chown -R (whoami):admin /usr/local`
  
+#### ffmpeg gif to mp4
+
+```
+ffmpeg -i /Users/lagden/Desktop/7EtVqiV.gif -c:v libx264 -pix_fmt yuv420p -movflags +faststart out.mp4
+```
+
