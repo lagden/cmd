@@ -257,3 +257,26 @@ Or, if you don't want/need launchctl, you can just run:
 ffmpeg -i /Users/lagden/Desktop/7EtVqiV.gif -c:v libx264 -pix_fmt yuv420p -movflags +faststart out.mp4
 ```
 
+#### ffmpeg mov to gif
+
+```
+ffmpeg -t 30 -ss 0.5 -i in.mov -r "15" out.gif
+```
+
+or
+
+```bash
+#!/bin/sh
+
+start_time=0.5
+duration=30
+
+palette="/tmp/palette.png"
+
+filters="fps=15,scale=375:-1:flags=lanczos"
+
+ffmpeg -ss $start_time -t $duration -i $1 -vf "$filters,palettegen" -y $palette
+ffmpeg -ss $start_time -t $duration -i $1 -i $palette -lavfi "$filters [x]; [x][1:v] paletteuse" -y $2
+
+exit
+```
