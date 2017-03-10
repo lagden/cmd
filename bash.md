@@ -280,3 +280,7 @@ ffmpeg -ss $start_time -t $duration -i $1 -i $palette -lavfi "$filters [x]; [x][
 
 exit
 ```
+
+### DNS Flush
+
+https://help.dreamhost.com/hc/en-us/articles/214981288-Flushing-your-DNS-cache-in-Mac-OS-X-and-Linux
