@@ -12,5 +12,5 @@ docker restart (docker ps -a -q)
 
 ## logs
 ```
-docker logs -ft id_do_container
+docker logs -ft {id_do_container}
 ```
