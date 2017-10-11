@@ -1,3 +1,5 @@
+https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+
 ## remover todas as imagens
 ```
 docker rmi (docker image ls -q)
