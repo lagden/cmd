@@ -3,6 +3,11 @@
 docker rmi (docker image ls -q)
 ```
 
+## Remove dangling images
+```
+docker rmi (docker images -f dangling=true -q)
+```
+
 ## restart / parar / remover todos os containers
 ```
 docker stop (docker ps -a -q)
