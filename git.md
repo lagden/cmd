@@ -190,6 +190,9 @@ Put in your `.gitconfig`
 	# Clone a repository including all submodules
 	c = clone --recursive
 
+	# Commit all changes
+	ca = !git add -A && git commit -av
+
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
@@ -226,6 +229,9 @@ Put in your `.gitconfig`
 	# a.k.a. ‘delete merged’
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
+	# List contributors with number of commits
+	contributors = shortlog --summary --numbered
+
 	# Lagden Stuff
 	st = status
 	ci = commit
@@ -241,4 +247,8 @@ Put in your `.gitconfig`
 
 	# Force update tag (release)
 	force = "!force() { git tag $1 --force && git push origin $1 --force; }; force"
+
+[apply]
+	whitespace = fix
+
 ```
