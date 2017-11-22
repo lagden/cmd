@@ -21,3 +21,13 @@ docker restart (docker ps -a -q)
 ```
 docker logs -ft {id_do_container}
 ```
+
+## logs
+```
+docker logs -ft {id_do_container}
+```
+
+## execute shell
+```
+docker exec -it {id_do_container} {shell}
+```
