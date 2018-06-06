@@ -284,3 +284,9 @@ exit
 ### DNS Flush
 
 https://help.dreamhost.com/hc/en-us/articles/214981288-Flushing-your-DNS-cache-in-Mac-OS-X-and-Linux
+
+### Ubuntu ini.d
+
+```
+start-stop-daemon --start --chuid mongodb --exec /usr/bin/mongod -- --config /etc/mongod.conf
+```
