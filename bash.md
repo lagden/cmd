@@ -290,3 +290,19 @@ https://help.dreamhost.com/hc/en-us/articles/214981288-Flushing-your-DNS-cache-i
 ```
 start-stop-daemon --start --chuid mongodb --exec /usr/bin/mongod -- --config /etc/mongod.conf
 ```
+
+### Process listening on a particular port
+
+```
+netstat -ltnp | ack-grep 3002
+
+// output
+tcp6       0      0 :::3002                 :::*                    LISTEN      1958/node
+```
+
+```
+ps auxw | ack-grep 1958
+
+// output
+tex       1958  0.0  0.2 884208 33904 ?        Sl    2018   0:03 node /app/ramal/node_modules/.bin/micro -p 3002
+```
