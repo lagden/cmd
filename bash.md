@@ -306,3 +306,9 @@ ps auxw | ack-grep 1958
 // output
 tex       1958  0.0  0.2 884208 33904 ?        Sl    2018   0:03 node /app/ramal/node_modules/.bin/micro -p 3002
 ```
+
+## Copy to cliboard remote shell (OSX)
+
+```
+ssh user@10.0.1.123 "cat /etc/nginx/sites-enabled/site.conf" | pbcopy
+```
