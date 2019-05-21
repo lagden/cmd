@@ -31,3 +31,35 @@ docker logs -ft {id_do_container}
 ```
 docker exec -it {id_do_container} {shell}
 ```
+
+## Just clean out unused data and processes
+```
+docker system prune
+
+WARNING! This will remove:
+        - all stopped containers
+        - all networks not used by at least one container
+        - all dangling images
+        - all build cache
+```
+
+or
+
+```
+docker system prune --all --force --volumes
+
+WARNING! This will remove:
+        - all stopped containers
+        - all networks not used by at least one container
+        - all volumes not used by at least one container
+        - all images without at least one container associated to them
+        - all build cache
+```
+
+or
+
+```
+docker container prune  # Remove all stopped containers
+docker volume prune     # Remove all unused volumes
+docker image prune      # Remove unused images
+```
