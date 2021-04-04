@@ -250,6 +250,13 @@ Or, if you don't want/need launchctl, you can just run:
 #### Homebrew fix permission
  - sh: `sudo chown -R $(whoami):admin /usr/local`
  - fish: `sudo chown -R (whoami):admin /usr/local`
+
+
+#### ffmpeg audio para zapzap e telegram
+
+```
+ffmpeg -i exemplo.m4a -c:a libopus audio.ogg
+```
  
 #### ffmpeg gif to mp4
 
