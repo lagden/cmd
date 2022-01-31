@@ -292,6 +292,7 @@ exit
 
 ```
 ffmpeg -i videoName.mov -vcodec h264 -acodec mp2 videoName.mp4
+ffmpeg -i videoName.mov -vcodec libx264 -pix_fmt yuv420p -profile:v baseline -level 3 videoName.mp4
 ```
 
 #### ffmpeg convert .mov to .webm
