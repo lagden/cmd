@@ -307,6 +307,14 @@ ffmpeg -i videoName.mov -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis videoName.web
 ffmpeg -i videoName.mov -codec:v libtheora -qscale:v 7 -codec:a libvorbis -qscale:a 5 videoName.ogg
 ```
 
+#### gif animado resize
+
+```
+convert big.gif -coalesce temporary.gif
+convert -size 800x600+0+0 temporary.gif -gravity center -resize 200x200^ -extent 200x200 smaller.gif
+```
+
+
 ### DNS Flush
 
 https://help.dreamhost.com/hc/en-us/articles/214981288-Flushing-your-DNS-cache-in-Mac-OS-X-and-Linux
