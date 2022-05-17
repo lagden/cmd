@@ -238,6 +238,10 @@ Put in your `.gitconfig`
 	co = checkout
 	br = branch
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	de = "!f() (git log $1 -n 1); f"
+	
+	# Blame - file e linha
+	ba = "!f() (git blame -L $2,$2 $1); f"
 
 	# Commit all with custom msg
 	cam = "!cam() { git add -A && git commit -vm \"$1\"; }; cam"
