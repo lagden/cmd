@@ -346,3 +346,21 @@ tex       1958  0.0  0.2 884208 33904 ?        Sl    2018   0:03 node /app/ramal
 ```
 ssh user@10.0.1.123 "cat /etc/nginx/sites-enabled/site.conf" | pbcopy
 ```
+
+## Proxy
+
+### Homebrew
+
+Create the tunnel via ssh: `ssh -D 5151 user@server`
+
+```
+ALL_PROXY=socks5h://localhost:5151 brew update
+```
+
+### Tinyproxy
+
+Install and config `Tinyproxy` and make a test:
+
+```
+curl -x http://192.168.15.12:8887 https://www.google.com
+```
