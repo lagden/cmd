@@ -364,3 +364,9 @@ Install and config `Tinyproxy` and make a test:
 ```
 curl -x http://192.168.15.12:8887 https://www.google.com
 ```
+
+```
+export http_proxy=192.168.15.12:8887
+export HTTP_PROXY=192.168.15.12:8887
+docker run -it -e NGROK_AUTHTOKEN=2Zu...9Pc ngrok/ngrok:latest http host.docker.internal:5173
+```
