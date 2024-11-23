@@ -351,7 +351,7 @@ ssh user@10.0.1.123 "cat /etc/nginx/sites-enabled/site.conf" | pbcopy
 
 ### Homebrew
 
-Create the tunnel via ssh: `ssh -D 5151 user@server`
+Create the tunnel via ssh: `ssh -D 0.0.0.0:5151 -N user@server`
 
 ```
 ALL_PROXY=socks5h://localhost:5151 brew update
