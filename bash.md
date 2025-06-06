@@ -371,7 +371,7 @@ export HTTP_PROXY=192.168.15.12:8887
 docker run -it -e NGROK_AUTHTOKEN=2Zu...9Pc ngrok/ngrok:latest http host.docker.internal:5173
 ```
 
-### Listar portas usadas
+## Listar portas usadas
 
 No mac os:
 ```
@@ -383,3 +383,18 @@ Usando o nc:
 nc -zv localhost 1-65535 2>&1 | grep succeeded
 ```
 
+## Wormhole
+
+Transferir arquivos utilizando `magic-wormhole`
+
+### Sender
+
+```
+wormhole-rs send {file_name}
+```
+
+### Reciver
+
+```
+wormhole-rs receive {code}
+```
